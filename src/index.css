@@ -1,0 +1,179 @@
+/* Root */
+
+
+h1 {
+    /* style */
+    background: #D9D9D9;
+    /* layout */
+    display: flex;
+    height: 6.4375rem;
+    padding: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+    /* typo */
+    color: #140202;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2.25rem;
+    font-weight: bold;
+}
+
+nav {
+    display: grid;
+
+    gap: 0.625rem;
+    grid-template-areas:
+        'a b'
+        'c d';
+}
+
+nav a {
+    /* typo */
+    color: #140202;
+    text-align: center;
+    /* Header text */
+    font-family: Roboto;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    /* layout */
+    display: flex;
+    padding: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    /* style */
+    border-radius: 0.3125rem;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 8px 0px rgba(10, 99, 128, 0.62);
+}
+
+
+
+/* ContactForm AppointmentForm*/
+
+.form {
+    padding: 2rem 1rem;
+    width: 100%;
+    gap: 1.875rem;
+}
+
+.form h2 {
+    font-family: Roboto;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+.form form {
+    display: grid;
+    flex-direction: column;
+
+    padding: 0.625rem 0.6875rem 0.3125rem 0.6875rem;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.form form * {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    height: 6.0875rem;
+}
+
+.form form button {
+    text-align: center;
+    border-radius: 0.3125rem;
+    border: 1px solid #000;
+    background: #45ACE5;
+}
+
+/* ContactList AppoitnmentList */
+
+.list {
+    padding: 2rem 1rem;
+    width: 100%;
+    gap: 1.875rem;
+}
+
+.list h2 {
+    font-family: Roboto;
+    font-size: 2.25rem;
+    font-weight: 400;
+}
+
+table {
+    width: 100%;
+    /* border-collapse: collapse; */
+}
+
+th,
+td {
+    padding: 1rem;
+}
+
+th {
+    background: rgb(217, 217, 217);
+    border: 1px solid black;
+}
+
+
+
+tr:nth-of-type(2n) {
+    background: rgb(217, 217, 217, 0.3)
+}
+
+
+@media screen and (min-device-width: 768px) and (max-device-width: 1280px) and (orientation: portrait) {
+    nav a {
+        min-width: 20rem;
+    }
+
+    table {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+@media screen and (min-device-width: 340px) and (max-device-width: 768px) and (orientation: portrait) {
+
+    nav a {
+        min-width: 10.5rem;
+        font-size: 1rem;
+    }
+
+    th {
+        display: none;
+    }
+
+    td {
+        display: grid;
+        grid-template-columns: 10ch auto;
+        padding: 0.3rem;
+        text-align: right;
+    }
+
+    td:first-child {
+        padding-top: 1rem;
+    }
+
+    td:last-child {
+        padding-bottom: 1rem;
+    }
+
+    td::before {
+        content: attr(data-cell) ":   ";
+        text-transform: capitalize;
+        text-align: left;
+    }
+}
+
+@media screen and (min-device-width: 340px) and (max-device-width: 900px) and (orientation: landscape) {}
