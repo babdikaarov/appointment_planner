@@ -56,7 +56,10 @@ function App() {
           }
         />
       </Route>
-    )
+    ),
+    {
+      basename: "/appointment_planner/",
+    }
   );
 
   return <RouterProvider router={router} />;
